@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basit Etkileşimli Sayfa</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Doğrulama Sistemi</h1>
+    
+    <div class="choice-section">
+      <p>Lütfen doğrulamak istediğiniz türü seçin:</p>
+      <div class="button-group">
+        <button id="ibanChoiceBtn" class="choice-btn">IBAN Doğrulaması</button>
+        <button id="tcidChoiceBtn" class="choice-btn">TC Kimlik No Doğrulaması</button>
+      </div>
+    </div>
+    
+    <div id="ibanSection" class="section" style="display: none">
+      <h2>IBAN Doğrulaması</h2>
+      <p id="ibanMessage">IBAN numranızı girin ve doğrulamak için butona tıklayın.</p>
+      <input id="ibanInput" type="text" placeholder="IBAN girin (ör: TR330006100519786457841326)" />
+      <button id="ibanButton">IBAN Doğrula</button>
+      <div class="result" id="ibanResult"></div>
+    </div>
+    
+    <div id="tcidSection" class="section" style="display: none">
+      <h2>TC Kimlik No Doğrulaması</h2>
+      <p id="tcidMessage">11 haneli TC Kimlik No'nuzun girin ve doğrulamak için butona tıklayın.</p>
+      <input id="tcidInput" type="text" placeholder="TC Kimlik No girin (ör: 12345678901)" maxlength="11" />
+      <button id="tcidButton">TC Kimlik No Doğrula</button>
+      <div class="result" id="tcidResult"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
