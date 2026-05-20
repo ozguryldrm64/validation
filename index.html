@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Basit Etkileşimli Sayfa</title>
+  <title>Hata Bulma ve Düzeltme Algoritmaları</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="container">
-    <h1>Doğrulama Sistemi</h1>
+    <h1>Doğrulama Servisi</h1>
     
     <div class="choice-section">
-      <p>Lütfen doğrulamak istediğiniz türü seçin:</p>
+      <p>Lütfen doğrulamak istediğiniz veri türünü seçin:</p>
       <div class="button-group">
-        <button id="ibanChoiceBtn" class="choice-btn">IBAN Doğrulaması</button>
         <button id="tcidChoiceBtn" class="choice-btn">TC Kimlik No Doğrulaması</button>
+        <button id="creditCardChoiceBtn" class="choice-btn">Kredi Kartı Doğrulaması</button>
+        <button id="ibanChoiceBtn" class="choice-btn">IBAN Doğrulaması</button>
       </div>
     </div>
     
@@ -33,7 +34,18 @@
       <button id="tcidButton">TC Kimlik No Doğrula</button>
       <div class="result" id="tcidResult"></div>
     </div>
+    
+    <div id="creditCardSection" class="section" style="display: none">
+      <h2>Kredi Kartı Doğrulaması</h2>
+      <p id="creditCardMessage">Kredi kartı numaranızı girin ve doğrulamak için butona tıklayın.</p>
+      <input id="creditCardInput" type="text" placeholder="Kredi Kartı No girin (ör: 4532015112830366)" maxlength="19" />
+      <button id="creditCardButton">Kredi Kartını Doğrula</button>
+      <div class="result" id="creditCardResult"></div>
+    </div>
   </div>
+  <footer class="footer">
+    Tübitak 4006 Projesi: Sıdıka Serap Tülü ve Sude Doğan
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
