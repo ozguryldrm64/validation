@@ -154,12 +154,13 @@ button:active {
   position: fixed;
   bottom: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   text-align: center;
   padding: 12px 20px;
   background: rgba(255, 255, 255, 0.95);
   font-size: 0.75rem;
   color: #6b7280;
   border-top: 1px solid #e5e7eb;
+  box-sizing: border-box;
 }
 }
